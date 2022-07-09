@@ -1,0 +1,28 @@
+<%- include("header") -%>
+<body>
+    <div class="box" id="heading">
+        <h1>hello today is <%= day %></h1>
+    </div>
+ 
+    <div class="box">
+
+        <% for(var i=0; i<data.length ; i++) { %>
+            <div class="item">
+                <input type="checkbox" >
+                <p>
+
+                    <%= data[i] %>
+                </p>
+            </div>
+                 
+        <% } %>
+        
+        
+        <form action="/" method="POST">
+            <input type="text" name="to" placeholder="New Item" autocomplete="off">
+            <button type="submit" name="button">+</button>
+        </form>
+        
+    </div>
+</body>
+</html>
